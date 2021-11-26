@@ -12,9 +12,9 @@ Project stack:
 
 ### Here we have: ###
 
-Markup : * An assignment app where user can GET all the assignments in a single view and POST the assignment.
+* An assignment app where user can GET all the assignments in a single view and POST the assignment.
 
-Markup : * To 'register' a user or to 'login' a user we have used rest_auth and all_auth.
+* To 'register' a user or to 'login' a user we have used rest_auth and all_auth.
 
 
 ## Initial Project Setup ##
@@ -30,3 +30,36 @@ python manage.py runserver
 
 ## Test Case Example:
 
+### Request:
+
+```bash
+method: POST
+request: http://127.0.0.1:8000/assignment/
+```
+
+```bash
+{
+    "title": "Assignment One",
+    "description": "This is a description.",
+    "music_genre": "Rock Music",
+    "daily_practice_time": "00:08:00",
+    "days": 5,
+    "days_practiced": 5
+}
+```
+
+```bash
+method: GET
+request: http://127.0.0.1:8000/assignment/
+```
+
+```bash
+{
+    "title": "Assignment One",
+    "description": "This is a description.",
+    "music_genre": "Rock Music",
+    "daily_practice_time": "00:08:00",
+    "days": 5,
+    "days_practiced": 5
+}
+```
