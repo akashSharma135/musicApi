@@ -7,15 +7,12 @@ from rest_framework.permissions import IsAuthenticated
 
 class AssignmentView(APIView):
     def get(self, request):
-        
-
         obj = Assignment.objects.all()
         serializer = AssignmentSerializer(obj, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
     def post(self, request):
-        permission_classes = [IsAuthenticated,]
         serializer = AssignmentSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
