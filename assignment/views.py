@@ -3,7 +3,6 @@ from assignment.models import Assignment
 from .serializers import AssignmentSerializer
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.permissions import IsAuthenticated
 
 class AssignmentView(APIView):
     def get(self, request):
@@ -17,4 +16,4 @@ class AssignmentView(APIView):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
