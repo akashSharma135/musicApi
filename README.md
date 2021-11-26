@@ -30,7 +30,7 @@ python manage.py runserver
 
 ## Test Case Example:
 
-### Request:
+### Request (POST):
 
 ```bash
 method: POST
@@ -48,13 +48,11 @@ request: http://127.0.0.1:8000/assignment/
 }
 ```
 
-```bash
-method: GET
-request: http://127.0.0.1:8000/assignment/
-```
+### Response:
 
 ```bash
 {
+    "id": 1,
     "title": "Assignment One",
     "description": "This is a description.",
     "music_genre": "Rock Music",
@@ -62,4 +60,36 @@ request: http://127.0.0.1:8000/assignment/
     "days": 5,
     "days_practiced": 5
 }
+```
+
+### Request (GET):
+
+```bash
+method: GET
+request: http://127.0.0.1:8000/assignment/
+```
+
+### Response:
+
+```bash
+[
+    {
+        "id": 1,
+        "title": "Assignment One",
+        "description": "This is a description.",
+        "music_genre": "Rock Music",
+        "daily_practice_time": "00:08:00",
+        "days": 5,
+        "days_practiced": 5
+    },
+    {
+        "id": 2,
+        "title": "Assignment Two",
+        "description": "This is a description.",
+        "music_genre": "Soul Music",
+        "daily_practice_time": "00:06:00",
+        "days": 5,
+        "days_practiced": 4
+    }
+]
 ```
