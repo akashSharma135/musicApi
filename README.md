@@ -7,14 +7,12 @@ A music student want to see all the assignments in one place in one simple view,
 Project stack:
     1) Python3
     2) Django
-    3) Django REST Framework, rest_auth and allauth
+    3) Django REST Framework
 
 
 ### Here we have: ###
 
 * An assignment app where user can GET all the assignments in a single view and POST the assignment.
-
-* To 'register' a user or to 'login' a user we have used rest_auth and all_auth.
 
 
 ## Initial Project Setup ##
